@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Upload • Seed Validation</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body data-page="">
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand">
+        <div class="logo">🌱</div>
+        <div class="brand-text">
+          <div class="brand-title">Carrot Seed Planting Validation</div>
+          <div class="brand-subtitle">CSE 120 • Static Prototype (GitHub Pages)</div>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a class="navlink" href="home.html">Home</a>
+        <a class="navlink navactive" href="upload.html">Upload</a>
+        <a class="navlink" href="live.html">Live</a>
+        <a class="navlink" href="analytics.html">Analytics</a>
+        <a class="navlink" href="validation.html">Validation</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container page">
+    
+<div class="page-title">
+  <h1 class="h1">Upload</h1>
+  <p class="muted">Prototype page for uploading a run video or dataset (static demo only).</p>
+</div>
+
+<section class="grid-2">
+  <div class="card">
+    <h2 class="h2">Upload a run</h2>
+    <p class="muted">In the real system this could accept video clips or CSV sensor logs.</p>
+
+    <div class="divider"></div>
+
+    <form class="form" onsubmit="return false;">
+      <label class="label">Run name</label>
+      <input class="input" placeholder="e.g., Field 7 • Bed A • 03-01-2026" />
+
+      <label class="label">File (demo)</label>
+      <input class="input" type="file" />
+
+      <label class="label">Notes</label>
+      <textarea class="textarea" rows="4" placeholder="Optional notes for this run..."></textarea>
+
+      <div class="row">
+        <button class="btn primary" type="button" onclick="document.getElementById('uploadMsg').textContent='Demo only: upload is not connected to a backend on GitHub Pages.'">Upload (demo)</button>
+        <a class="btn" href="live.html">Go to Live</a>
+      </div>
+
+      <p id="uploadMsg" class="small muted mt"></p>
+    </form>
+  </div>
+
+  <div class="card">
+    <h2 class="h2">What happens after upload?</h2>
+    <ul class="list">
+      <li>Parse the uploaded file</li>
+      <li>Run detection + bucketing per tube: 0, 1, 2, &gt;2</li>
+      <li>Compute summary stats and accuracy against ground truth (if available)</li>
+      <li>Store results for analytics and exporting</li>
+    </ul>
+
+    <div class="callout">
+      <div class="callout-title">Implementation note</div>
+      <div class="callout-text">
+        For a real deployed backend, use Render/Railway and POST uploads to an API.
+      </div>
+    </div>
+  </div>
+</section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>Prototype dashboard • Data is simulated in-browser for GitHub Pages</div>
+      <div class="muted">© 2026</div>
+    </div>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

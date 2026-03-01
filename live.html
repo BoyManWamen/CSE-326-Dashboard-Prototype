@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Live • Seed Validation</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body data-page="live">
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand">
+        <div class="logo">🌱</div>
+        <div class="brand-text">
+          <div class="brand-title">Carrot Seed Planting Validation</div>
+          <div class="brand-subtitle">CSE 120 • Static Prototype (GitHub Pages)</div>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a class="navlink" href="home.html">Home</a>
+        <a class="navlink" href="upload.html">Upload</a>
+        <a class="navlink navactive" href="live.html">Live</a>
+        <a class="navlink" href="analytics.html">Analytics</a>
+        <a class="navlink" href="validation.html">Validation</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container page">
+    
+<div class="page-title">
+  <h1 class="h1">Live View</h1>
+  <p class="muted">
+    Real-time <b>simulated</b> data (GitHub Pages compatible). Updates every 1 second.
+    This matches the behavior of your Flask <code>/data</code> route.
+  </p>
+</div>
+
+<section class="grid-4">
+  <div class="card kpi">
+    <div class="kpi-label">Skip (0)</div>
+    <div id="kpiSkip" class="kpi-value">0</div>
+    <div class="kpi-note muted">Tube reported 0</div>
+  </div>
+  <div class="card kpi">
+    <div class="kpi-label">Ideal (1)</div>
+    <div id="kpiIdeal" class="kpi-value">0</div>
+    <div class="kpi-note muted">Tube reported 1</div>
+  </div>
+  <div class="card kpi">
+    <div class="kpi-label">Double (2)</div>
+    <div id="kpiDouble" class="kpi-value">0</div>
+    <div class="kpi-note muted">Tube reported 2</div>
+  </div>
+  <div class="card kpi">
+    <div class="kpi-label">Overdrop (&gt;2)</div>
+    <div id="kpiOver" class="kpi-value">0</div>
+    <div class="kpi-note muted">Tube reported 3+</div>
+  </div>
+</section>
+
+<section class="grid-2 mt">
+  <div class="card">
+    <div class="row between">
+      <h2 class="h2">Per-tube counts</h2>
+      <div class="pill" id="liveStatus">Connecting…</div>
+    </div>
+
+    <table class="table" aria-label="Tube counts table">
+      <thead>
+        <tr>
+          <th>Tube</th>
+          <th>Seed Count</th>
+          <th>Bucket</th>
+        </tr>
+      </thead>
+      <tbody id="tubeTable"></tbody>
+    </table>
+
+    <p class="small muted mt">
+      Buckets: 0 = <b>skip</b>, 1 = <b>ideal</b>, 2 = <b>double</b>, 3+ = <b>overdrop</b>
+    </p>
+  </div>
+
+  <div class="card">
+    <h2 class="h2">Total seeds over time</h2>
+    <p class="muted small">Last 20 updates (1 second interval).</p>
+    <canvas id="historyChart" width="700" height="260" class="canvas"></canvas>
+  </div>
+</section>
+
+<section class="card mt">
+  <div class="row between">
+    <h2 class="h2">Heatmap (simulated grid)</h2>
+    <div class="muted small">8 × 14 cells</div>
+  </div>
+  <div id="heatmap" class="heatmap" aria-label="Heatmap grid"></div>
+</section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>Prototype dashboard • Data is simulated in-browser for GitHub Pages</div>
+      <div class="muted">© 2026</div>
+    </div>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

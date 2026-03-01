@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home • Seed Validation</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body data-page="">
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand">
+        <div class="logo">🌱</div>
+        <div class="brand-text">
+          <div class="brand-title">Carrot Seed Planting Validation</div>
+          <div class="brand-subtitle">CSE 120 • Static Prototype (GitHub Pages)</div>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a class="navlink navactive" href="home.html">Home</a>
+        <a class="navlink" href="upload.html">Upload</a>
+        <a class="navlink" href="live.html">Live</a>
+        <a class="navlink" href="analytics.html">Analytics</a>
+        <a class="navlink" href="validation.html">Validation</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container page">
+    
+<div class="page-title">
+  <h1 class="h1">Dashboard Home</h1>
+  <p class="muted">Quick summary of the most recent run (placeholder data).</p>
+</div>
+
+<section class="grid-3">
+  <div class="card">
+    <div class="kpi-label">Estimated Accuracy</div>
+    <div class="kpi-value">97%</div>
+    <div class="kpi-note muted">Target ≥ 97%</div>
+  </div>
+
+  <div class="card">
+    <div class="kpi-label">Seeds Processed</div>
+    <div class="kpi-value">12,500</div>
+    <div class="kpi-note muted">Total across tubes</div>
+  </div>
+
+  <div class="card">
+    <div class="kpi-label">System Status</div>
+    <div class="kpi-value">Active</div>
+    <div class="kpi-note muted">Mock status indicator</div>
+  </div>
+</section>
+
+<section class="grid-2 mt">
+  <div class="card">
+    <h2 class="h2">Start here</h2>
+    <p class="muted">For the most “demo-ready” experience:</p>
+    <ol class="list">
+      <li>Go to <b>Live</b> to see real-time updates.</li>
+      <li>Use <b>Analytics</b> to review overall distribution.</li>
+      <li>Use <b>Validation</b> to explain the bucket rules.</li>
+    </ol>
+
+    <div class="row mt">
+      <a class="btn primary" href="live.html">Open Live View</a>
+      <a class="btn" href="analytics.html">View Analytics</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2 class="h2">Stakeholder context (short)</h2>
+    <p class="muted">
+      Operators need immediate feedback when a planter tube is skipping (0) or overdropping (&gt;2),
+      so they can adjust equipment and reduce yield loss.
+    </p>
+    <div class="callout">
+      <div class="callout-title">Note</div>
+      <div class="callout-text">
+        This is a front-end prototype. Replace simulated values with real sensor/vision output later.
+      </div>
+    </div>
+  </div>
+</section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>Prototype dashboard • Data is simulated in-browser for GitHub Pages</div>
+      <div class="muted">© 2026</div>
+    </div>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

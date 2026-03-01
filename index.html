@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login • Seed Validation</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body data-page="">
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand">
+        <div class="logo">🌱</div>
+        <div class="brand-text">
+          <div class="brand-title">Carrot Seed Planting Validation</div>
+          <div class="brand-subtitle">CSE 120 • Static Prototype (GitHub Pages)</div>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a class="navlink" href="home.html">Home</a>
+        <a class="navlink" href="upload.html">Upload</a>
+        <a class="navlink" href="live.html">Live</a>
+        <a class="navlink" href="analytics.html">Analytics</a>
+        <a class="navlink" href="validation.html">Validation</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container page">
+    
+<section class="grid-2">
+  <div class="card">
+    <h1 class="h1">Welcome</h1>
+    <p class="muted">
+      This is a <b>static</b> prototype (GitHub Pages compatible). There is no Flask backend here.
+      The <b>Live</b> page simulates your <code>/data</code> endpoint inside the browser.
+    </p>
+
+    <div class="divider"></div>
+
+    <form class="form" onsubmit="return false;">
+      <label class="label">Email (demo)</label>
+      <input class="input" type="email" placeholder="you@ucmerced.edu" />
+
+      <label class="label">Password (demo)</label>
+      <input class="input" type="password" placeholder="••••••••" />
+
+      <div class="row">
+        <a class="btn primary" href="home.html">Login</a>
+        <a class="btn" href="live.html">Skip to Live</a>
+      </div>
+
+      <p class="small muted">
+        Note: Authentication is not implemented in this prototype.
+      </p>
+    </form>
+  </div>
+
+  <div class="card accent">
+    <h2 class="h2">What this demo shows</h2>
+    <ul class="list">
+      <li>Live “per-tube” seed count buckets: 0, 1, 2, &gt;2</li>
+      <li>Simple metrics summary for quick operator feedback</li>
+      <li>Heatmap visualization (simulated)</li>
+      <li>Analytics and validation pages for review</li>
+    </ul>
+
+    <div class="callout">
+      <div class="callout-title">Tip</div>
+      <div class="callout-text">
+        Go to <b>Live</b> to see real-time updates (simulated) that match your Flask prototype behavior.
+      </div>
+    </div>
+  </div>
+</section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>Prototype dashboard • Data is simulated in-browser for GitHub Pages</div>
+      <div class="muted">© 2026</div>
+    </div>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
