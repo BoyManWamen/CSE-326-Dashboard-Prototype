@@ -1,20 +1,3 @@
-/*
-  assets/app.js (Static GitHub Pages version)
-  ------------------------------------------
-  GitHub Pages cannot run Flask/Python routes like /data.
-  This file simulates your Flask /data endpoint entirely in the browser.
-
-  It generates:
-    - per-tube seed counts for 6 tubes
-    - bucket metrics: skip/ideal/double/overdrop
-    - a heatmap grid 8x14
-    - history (last 20 points) for a small line chart
-
-  NOTE: The random distributions match your Flask prototype:
-    tube counts: random choice of [0,1,1,1,2,3]
-    heatmap values: random choice of [0,1,1,2,3]
-*/
-
 (function () {
   // ------- Shared state (like your Flask globals) -------
   const state = {
